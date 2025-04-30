@@ -9,6 +9,9 @@ export default function DashboardLayout() {
   const handlePost = async () => {
     try {
       const cookie = authClient.getCookie();
+
+      // console.log('cookie HERE:', cookie);
+
       const res = await fetch("http://localhost:3000/api/get-stuff", {
         method: "POST",
         headers: {

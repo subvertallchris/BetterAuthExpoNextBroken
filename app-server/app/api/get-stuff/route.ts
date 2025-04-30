@@ -7,7 +7,8 @@ export const POST = async () => {
   await connection();
 
   const headersData = await headers();
-  // const cookieValue = headersData.get("cookie");
+  const cookieValue = headersData.get("cookie");
+  console.log('cookieValue HERE:',cookieValue);
 
   const session = await auth.api.getSession({
     headers: headersData,
